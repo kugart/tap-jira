@@ -90,6 +90,7 @@ def raise_if_bookmark_cannot_advance(worklogs):
 
 
 def sync_sub_streams(page):
+    
     for issue in page:
         comments = issue["fields"].pop("comment")["comments"]
         if comments and Context.is_selected(ISSUE_COMMENTS.tap_stream_id):
