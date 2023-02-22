@@ -112,7 +112,6 @@ def sync():
 
 @singer.utils.handle_top_exception(LOGGER)
 def main():
-  asdwqdwq
     args = get_args()
 
     jira_config = args.config
