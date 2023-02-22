@@ -305,7 +305,7 @@ class Issues(Stream):
         timezone = Context.retrieve_timezone()
         start_date = last_updated.astimezone(pytz.timezone(timezone)).strftime("%Y-%m-%d %H:%M")
 
-        jql = "updated >= '{}' AND project='PBBI' order by updated asc".format(start_date)
+        jql = "updated >= '{}' AND project in ('PROFITBASE','PBTS','PBAIS','PBA','PBAI','LKPROFIT','PBACC') order by updated asc".format(start_date)
         params = {"fields": "*all",
                   "expand": "changelog,transitions",
                   "validateQuery": "strict",
